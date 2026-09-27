@@ -1,22 +1,31 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
 require 'phpMailer/Exception.php';
 require 'phpMailer/PHPMailer.php';
 require 'phpMailer/SMTP.php';
+
+// TODO: Basic CSRF check comment placeholder
+
+$name = $_POST['name'] ?? 'Unknown';
+$email = $_POST['email'] ?? 'Unknown';
+$phone = $_POST['phone'] ?? 'Unknown';
+$topic = $_POST['topic'] ?? 'Unknown';
+$dateTime = $_POST['dateTime'] ?? 'Unknown';
 
 //Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->SMTPDebug = 0;                                       //Disable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
+    $mail->Host       = getenv('SMTP_HOST') ?: 'smtp.example.com';
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'user@example.com';                     //SMTP username
-    $mail->Password   = 'secret';                               //SMTP password
+    $mail->Username   = getenv('SMTP_USERNAME') ?: '';
+    $mail->Password   = getenv('SMTP_PASSWORD') ?: '';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
@@ -28,21 +37,14 @@ try {
     $mail->addCC('cc@example.com');
     $mail->addBCC('bcc@example.com');
 
-    //Attachments
-    $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = '#Capital Experts inversion';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->Subject = 'Capital Experts - Nueva Consulta de ' . $name;
+    $mail->Body    = "<b>Nombre:</b> {$name}<br><b>Correo:</b> {$email}<br><b>Teléfono:</b> {$phone}<br><b>Motivo:</b> {$topic}<br><b>Fecha y Hora:</b> {$dateTime}";
+    $mail->AltBody = "Nombre: {$name}\nCorreo: {$email}\nTeléfono: {$phone}\nMotivo: {$topic}\nFecha y Hora: {$dateTime}";
 
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo "Message could not be sent. Please try again later.";
 }
-
-
-

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Capital Experts | Desarrolladora e Inversión Inmobiliaria</title>
   <meta name="description" content="Capital Experts - Desarrolladora Inmobiliaria especializada en fondeo, estructuración y comercialización de proyectos inmobiliarios de alta rentabilidad." />
   <meta name="keywords" content="Capital Experts, bienes raíces, desarrolladora inmobiliaria, inversión inmobiliaria, México" />
@@ -36,7 +35,7 @@
     }
 
     .gradient {
-      background: #F0F0F0
+      background: #F0F0F0;
         /* border: 1px solid #707070; */
     }
 
@@ -149,7 +148,7 @@
   <!--Nav-->
   <div class="gradient w-full h-full leading-relaxed tracking-wide flex flex-col">
     <div
-      class="px-5 w-full h-full sm:px-8 md:px-18 lg:px-32 xl:px-48 hero bg-center bg-fixed bg-no-repeat bg-center bg-cover h-screen flex flex-col">
+      class="px-5 w-full h-full sm:px-8 md:px-18 lg:px-32 xl:px-48 hero bg-center bg-fixed bg-no-repeat bg-cover h-screen flex flex-col">
       <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6">
           <div class="pl-4 flex items-center">
@@ -159,7 +158,7 @@
           </div>
 
           <div class="block lg:hidden pr-4">
-            <button id="nav-toggle"
+            <button id="nav-toggle" aria-label="Abrir menú" aria-expanded="false"
               class="flex items-center px-3 py-2 text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none">
               <img src="./assets/icons/menu-white.svg" alt="Menu">
             </button>
@@ -186,12 +185,10 @@
                   href="#contact">Contacto</a>
               </li>
             </ul>
-            <a>
               <button id="navAction" onclick="callForm()"
-                class="hover:opacity-50 mx-auto lg:mx-0 montserrat font-medium hover:underline text-white bg-aqua font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 border_red border-2 rounded">
+                class="hover:opacity-50 mx-auto lg:mx-0 montserrat font-medium hover:underline text-white bg-aqua font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 border_red border-2">
                 Solicite una llamada
               </button>
-            </a>
           </div>
         </div>
       </nav>
@@ -205,9 +202,7 @@
             nuestro origen nos brinda la experiencia minimizamos los riesgos para maximizar la rentabilidad de nuestros
             proyectos.
           </p>
-          <a href="#contact"> <button
-              class="hover:opacity-50 bg-aqua border-aqua my-1 p-2  text-white border_red border-2 rounded">CONTÁCTANOS</button></a>
-
+          <a href="#contact" class="hover:opacity-50 bg-aqua border-aqua my-1 p-2 text-white border_red border-2 rounded inline-block" role="button">CONTÁCTANOS</a>
         </div>
       </div>
 
@@ -217,50 +212,50 @@
             class="flex flex-auto h-full flex-row mx-auto items-center justify-between text-xl self-end my-auto  align-bottom font-bold opacity-75">
 
             <div class="w-full h-full flex flex-col  md:flex-row">
-              <div id="option" class="w-full  flex my-auto">
-                <span id="option"
+              <div class="option-item w-full flex my-auto">
+                <span
                   onmouseover="document.getElementById('option-txt1').classList.remove('hidden'); document.getElementById('option1').src='./assets/icons/settings (1).svg'"
                   onmouseout="document.getElementById('option-txt1').classList.add('hidden'); document.getElementById('option1').src='./assets/icons/settings (1).svg'"
-                  class="transform transition duration-500 hover:scale-125 my-auto  border-r-2  w-full text-center mx-auto md:my-auto h-full p-0 md:p-4   flex flex-col items-center text-white">
-                  <img id="option1" class="" width="50" height="50" src="./assets/icons/settings (1).svg" alt="">
+                  class="transform transition duration-500 hover:scale-125 my-auto border-r-2 w-full text-center mx-auto md:my-auto h-full p-0 md:p-4 flex flex-col items-center text-white">
+                  <img id="option1" class="" width="50" height="50" src="./assets/icons/settings (1).svg" alt="Gerencia">
                   Gerencia de Proyectos
-                  <p id="option-txt1" class="hidden text-base pt-2">Contactenos si busca trasladar operaciones a Méxicos
+                  <p id="option-txt1" class="hidden text-base pt-2">Contáctenos si busca trasladar operaciones a México
                   </p>
                 </span>
 
               </div>
-              <!-- <div id="option" class="w-full  my-auto">
-                <span id="option"
+              <!-- <div class="option-item w-full my-auto">
+                <span
                   onmouseover="document.getElementById('option-txt2').classList.remove('hidden'); document.getElementById('option2').src='./assets/icons/vector-2.svg'"
                   onmouseout="document.getElementById('option-txt2').classList.add('hidden');document.getElementById('option2').src='./assets/icons/icono-2.svg'"
-                  class="transform transition duration-500 hover:scale-125  border-r-2  w-full text-center mx-auto md:my-auto  h-full p-0 md:p-4  flex flex-col items-center text-white">
-                  <img id="option2" class="" width="50" height="50" src="./assets/icons/icono-2.svg" alt="">
+                  class="transform transition duration-500 hover:scale-125 border-r-2 w-full text-center mx-auto md:my-auto h-full p-0 md:p-4 flex flex-col items-center text-white">
+                  <img id="option2" class="" width="50" height="50" src="./assets/icons/icono-2.svg" alt="Traslado">
                   TRASLADO DE OPERACIONES
-                  <p id="option-txt2" class="hidden text-base pt-2">Contactenos si busca trasladar operaciones a México
+                  <p id="option-txt2" class="hidden text-base pt-2">Contáctenos si busca trasladar operaciones a México
                   </p>
                 </span>
               </div> -->
             </div>
 
-            <div class="w-full  flex flex-col h-full md:flex-row">
-              <div id="option" class="w-full my-auto ">
+            <div class="w-full flex flex-col h-full md:flex-row">
+              <div class="option-item w-full my-auto">
                 <span
                   onmouseover="document.getElementById('option-txt3').classList.remove('hidden'); document.getElementById('option3').src='./assets/icons/Grupo 2388.svg'"
                   onmouseout="document.getElementById('option-txt3').classList.add('hidden');document.getElementById('option3').src='./assets/icons/Grupo 2388.svg'"
-                  class="transform transition duration-500 hover:scale-125 md:border-r-2 w-full mx-auto md:my-auto text-center mx-auto md:my-auto h-full p-0 md:p-4  flex flex-col items-center text-white">
-                  <img id="option3" class="" width="50" height="50" src="./assets/icons/Grupo 2388.svg" alt="">
+                  class="transform transition duration-500 hover:scale-125 md:border-r-2 w-full mx-auto md:my-auto text-center h-full p-0 md:p-4 flex flex-col items-center text-white">
+                  <img id="option3" class="" width="50" height="50" src="./assets/icons/Grupo 2388.svg" alt="Fondo de inversión">
                   Fondo de Inversión Inmobiliario
                   <p id="option-txt3" class="hidden text-base pt-2">Empresas nacionales y extranjeras</p>
                 </span>
               </div>
             </div>
-            <div class="w-full  flex flex-col h-full md:flex-row">
-              <div id="option" class="w-full  my-auto  option-txt">
+            <div class="w-full flex flex-col h-full md:flex-row">
+              <div class="option-item w-full my-auto option-txt">
                 <span
                   onmouseover="document.getElementById('option-txt4').classList.remove('hidden');document.getElementById('option4').src='./assets/icons/Grupo 2377.svg'"
                   onmouseout="document.getElementById('option-txt4').classList.add('hidden');document.getElementById('option4').src='./assets/icons/Grupo 2377.svg'"
-                  class="transform transition duration-500 hover:scale-125 w-full text-center mx-auto md:my-auto p-0 md:p-4  h-full flex flex-col items-center text-white">
-                  <img id="option4" class="" width="50" height="50" src="./assets/icons/Grupo 2377.svg" alt="">
+                  class="transform transition duration-500 hover:scale-125 w-full text-center mx-auto md:my-auto p-0 md:p-4 h-full flex flex-col items-center text-white">
+                  <img id="option4" class="" width="50" height="50" src="./assets/icons/Grupo 2377.svg" alt="Experiencia">
                   EXPERIENCIA
                   <p id="option-txt4" class="text-base pt-2 pb-0 hidden xl:pb-8">Construcción industrial y comercial</p>
                 </span>
@@ -276,13 +271,13 @@
 
     </div>
 
-    <div id="about" class="w-full 2xl:w-10/12   lg:h-screen mx-auto flex flex-col lg:flex-row   lg:mb-20 lg:mb-0">
+    <div id="about" class="w-full 2xl:w-10/12 lg:h-screen mx-auto flex flex-col lg:flex-row lg:mb-0">
       <div class="lg:h-1/2 w-full lg:w-1/2 lg:my-auto relative z-40">
-        <img class="my-auto relative lg:-right-24   h-full w-full" width="500" src="./assets/img/building.jpg" alt="">
+        <img class="my-auto relative lg:-right-24 h-full w-full" width="500" src="./assets/img/building.jpg" alt="Edificio corporativo Capital Experts">
       </div>
       <div
-        class="container z-0  lg:relative  lg:-left-12 xl:-left-18 2xl:-left-24  lg:h-2/3  w-full lg:w-1/2 lg:my-auto border-4 border-aqua py-5 lg:py-28 px-5 lg:pl-56 max-w-5xl inline-block ">
-        <div class="w-full h-full flex flex-col lg:justify-center lg:content-center  lg:my-auto">
+        class="container z-0 lg:relative lg:-left-12 xl:-left-18 2xl:-left-24 lg:h-2/3 w-full lg:w-1/2 lg:my-auto border-4 border-aqua py-5 lg:py-28 px-5 lg:pl-56 max-w-5xl inline-block">
+        <div class="w-full h-full flex flex-col lg:justify-center lg:content-center lg:my-auto">
           <h2 class="font-semibold montserrat text-white text-4xl align-middle txt-aqua">
             CAPITAL EXPERTS <br>
             <span class="text-xl align-middle txt-aqua">Desarrolladora Inmobiliaria</span>
@@ -297,20 +292,20 @@
     </div>
 
     <div class="w-full h-full blue py-8">
-      <div class="w-full lg:w-3/4  h-full  my-auto mx-auto flex flex-col lg:flex-row">
-        <div class="w-full lg:w-1/2 h-full flex flex-col justify-center content-center self-center  my-auto ">
+      <div class="w-full lg:w-3/4 h-full my-auto mx-auto flex flex-col lg:flex-row">
+        <div class="w-full lg:w-1/2 h-full flex flex-col justify-center content-center self-center my-auto">
           <h2 class="font-semibold w-full lg:w-2/3 montserrat text-white text-4xl align-middle">
             CAPITAL EXPERTS
-            <span class="text-xl  w-full lg:w-2/3 align-middle">Desarrolladora Inmobiliaria</span>
+            <span class="text-xl w-full lg:w-2/3 align-middle">Desarrolladora Inmobiliaria</span>
           </h2>
-          <p class="text-white  w-full lg:w-2/3 font-normal text-base mt-5 align-middle">
+          <p class="text-white w-full lg:w-2/3 font-normal text-base mt-5 align-middle">
             Gestionamos los proyectos inmobiliarios de manera independiente para garantizar su fondeo a través de un
             programa físico-financiero a la par de una estrategia de comercialización especializada.
           </p>
-          <button class="hover:opacity-50  mt-6  w-full lg:w-1/2 text-white  my-1 p-2  bg-aqua border_red border-2 rounded">Ver mas -></button>
+          <a href="#proyects" class="hover:opacity-50 mt-6 w-full lg:w-1/2 text-white my-1 p-2 bg-aqua border_red border-2 rounded text-center inline-block" role="button">Ver más →</a>
         </div>
-        <div class="w-full lg:w-1/2   h-1/2   my-auto relative ">
-          <img class="my-auto h-full relative float-left w-full " src="./assets/img/employees.jpg" alt="">
+        <div class="w-full lg:w-1/2 h-1/2 my-auto relative">
+          <img class="my-auto h-full relative float-left w-full" src="./assets/img/employees.jpg" alt="Equipo de trabajo Capital Experts">
         </div>
       </div>
     </div>
@@ -333,14 +328,14 @@
       <div class="w-full h-full container mx-auto flex flex-row ">
         <div class="w-1/2 h-full mx-2">
           <div class="w-full m-2  flex justify-end">
-            <a target="new blank" href="proyect.html?name=torre-y-19">
+            <a target="_blank" rel="noopener noreferrer" href="proyect.html?name=torre-y-19">
               <img class="hover:opacity-25  relative float-right" width="350" height="300"
                 src="./assets/img/gallery/Torre-Y19-3-1024x598.jpg" alt="">
             </a>
           </div>
 
           <div class="w-full m-2  flex justify-end">
-            <a target="new blank" href="proyect.html?name=rosarito-1">
+            <a target="_blank" rel="noopener noreferrer" href="proyect.html?name=rosarito-1">
               <img class="hover:opacity-25 " width="490" height="420"
                 src="./assets/img/gallery/Residencial-Rosarito-1.jpg" alt="">
             </a>
@@ -348,7 +343,7 @@
 
 
           <div class="w-full m-2  flex justify-end">
-            <a target="new blank" href="proyect.html?name=carwash">
+            <a target="_blank" rel="noopener noreferrer" href="proyect.html?name=carwash">
               <img class="hover:opacity-25 " width="550" height="300" src="./assets/img/gallery/Carwash-BW-1.jpg"
                 alt="">
             </a>
@@ -359,24 +354,20 @@
         <div class="w-1/2 h-full mx-2">
 
           <div class="w-full m-2  flex justify-start">
-            <a target="new blank" href="proyect.html?name=nave-murua-3">
+            <a target="_blank" rel="noopener noreferrer" href="proyect.html?name=nave-murua-3">
               <img class="hover:opacity-25 " width="500" height="410" src="./assets/img/gallery/Nave-Murua-3.jpeg"
                 alt="">
             </a>
           </div>
 
           <div class="w-full m-2  flex justify-start">
-            <a target="new blank" href="proyect.html?name=casas-libertad-1">
+            <a target="_blank" rel="noopener noreferrer" href="proyect.html?name=casas-libertad-1">
               <img class="hover:opacity-25 " width="450" height="290"
                 src="./assets/img/gallery/Casas-Libertad-1-1024x783.jpg" alt="">
             </a>
           </div>
 
-          <div class="bg-aqua hover:opacity-50 w-3/4 lg:w-1/3 h-32 mx-2 flex justify-center items-center ">
-            <a href="info.html"><button>
-                <p class="text-white">Ver mas ->
-              </button></p></a>
-          </div>
+          <a href="info.html" class="bg-aqua hover:opacity-50 w-3/4 lg:w-1/3 h-32 mx-2 flex justify-center items-center text-white" role="button">Ver más →</a>
 
         </div>
 
@@ -390,8 +381,8 @@
             <h2 class="my-2 montserrat font-semibold w-full text-2xl lg:text-5xl text-white">
               Invierte y asegura tu patrimonio
             </h2>
-            <h3 class="hover:opacity-50 my-2 text-white  ">
-              <button>ENVIANOS TUS DATOS -></button>
+            <h3 class="my-2 text-white font-medium">
+              ENVÍANOS TUS DATOS →
             </h3>
             <p class="text-white montserrat font-normal">
               <strong class="montserrat font-semibold">CAPITAL EXPERTS</strong> te ofrece la oportunidad de realizar
@@ -404,23 +395,24 @@
           </div>
         </div>
         <div class="w-full lg:w-1/2 h-full flex lg:p-10 ">
-          <form action="index.php" method="POST" class="w-full h-full float-left">
+          <form action="index.php" method="POST" class="w-full h-full float-left" onsubmit="submitted(event)">
             <div class="w-full lg:w-2/3 h-full p-10 bg-white flex flex-col self-start">
-              <label class="mt-4 font-gray-form" for="">Nombre</label>
-              <input class="font-gray-form border-2 rounded bg-gray-200 px-4 py-2" placeholder="Escriba aqui"
-                type="text" name="" id="">
-              <label class="font-gray-form mt-4" for="">Correo Electrónico</label>
-              <input class="font-gray-form border-2 rounded bg-gray-200 px-4 py-2" placeholder="Escriba aqui"
-                type="email" name="" id="">
-              <label class="font-gray-form mt-4" for="">Teléfono</label>
-              <input class=" font-gray-formborder-2 rounded bg-gray-200 px-4 py-2" placeholder="Escriba aqui" type="tel"
-                name="" id="">
+              <label class="mt-4 font-gray-form" for="contact-nombre">Nombre</label>
+              <input class="font-gray-form border-2 rounded bg-gray-200 px-4 py-2" placeholder="Escriba aquí"
+                type="text" name="nombre" id="contact-nombre" required>
+              <label class="font-gray-form mt-4" for="contact-correo">Correo Electrónico</label>
+              <input class="font-gray-form border-2 rounded bg-gray-200 px-4 py-2" placeholder="Escriba aquí"
+                type="email" name="correo" id="contact-correo" required>
+              <label class="font-gray-form mt-4" for="contact-telefono">Teléfono</label>
+              <input class="font-gray-form border-2 rounded bg-gray-200 px-4 py-2" placeholder="Escriba aquí"
+                type="tel" name="telefono" id="contact-telefono" required>
               <p class="ml-8 font-gray-form mt-3 montserrat font-normal"><strong
                   class="font-gray-form montserrat font-bold">Acepto</strong> - que mis datos sean compartidos y usados
                 para
                 contactarme de forma directa.</p>
-              <button type="submit" onclick="submitted()" ;
-                class="hover:opacity-50 mt-6  w-full lg:w-2/4 text-white border-2 rounded bg-aqua p-2 self-end border_red border-2 rounded">ENVIAR</button>
+              <button type="submit"
+                class="hover:opacity-50 mt-6 w-full lg:w-2/4 text-white rounded bg-aqua p-2 self-end border_red border-2">ENVIAR</button>
+            </div>
           </form>
         </div>
       </div>
@@ -441,10 +433,10 @@
           </div>
 
           <div class="flex flex-col w-1/3">
-            <p class="my-5 text-white text-center">Siguenos en</p>
+            <p class="my-5 text-white text-center">Síguenos en</p>
             <div class="flex flex-row w-1/2 mx-auto justify-center content-center">
-              <img class="mx-2" src="./assets/icons/facebook-f-brands.svg" alt="">
-              <img class="mx-2" src="./assets/icons/instagram-brands.svg" alt="">
+              <img class="mx-2" src="./assets/icons/facebook-f-brands.svg" alt="Facebook">
+              <img class="mx-2" src="./assets/icons/instagram-brands.svg" alt="Instagram">
             </div>
             <!-- <p class="my-5 text-white text-center">© 2026 Capital Experts</p> -->
           </div>
@@ -459,27 +451,18 @@
     </footer>
   </div>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="sweetalert2.all.min.js"></script>
-
   <script src="./index.js"></script>
   <script>
     /*Toggle dropdown list*/
     /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
-    var navMenuDiv = document.getElementById("nav-content");
-    var navMenu = document.getElementById("nav-toggle");
-
-    // var option1 = document.getElementById("option1");
-    // var option2 = document.getElementById("option2");
-    // var option3 = document.getElementById("option3");      bg-aqua 
-    // var option4 = document.getElementById("option4");
+    const navMenuDiv = document.getElementById("nav-content");
+    const navMenu = document.getElementById("nav-toggle");
 
     document.onclick = check;
 
-
-
     function check(e) {
-      var target = (e && e.target) || (event && event.srcElement);
+      const target = e.target;
 
       //Nav Menu
       if (!checkParent(target, navMenuDiv)) {

@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capital Experts - Registro</title>
+    <!-- TODO: Add SRI integrity attributes -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <!--Replace with your tailwind.css once created-->
     <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
-    <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
     <style>
         .gradient {
             background: #0E0E19 0% 0% no-repeat padding-box;
-            /* border: 1px solid #707070; */
             opacity: 1;
         }
 
@@ -26,49 +24,13 @@
 <body class="gradient">
     <div class="font-sans antialiased bg-grey-lightest">
         <!-- Top Nav -->
-        <div class=" w-full bg-green fixed shadow z-1">
+        <div class=" w-full fixed shadow z-10">
             <div class="container mx-auto">
                 <div class="w-full flex justify-between items-center py-4 px-8">
                     <!-- Brand -->
                     <a href="index.html">
                         <img width="200" height="50" src="./assets/img/logo-capital-experts.svg" alt="Capital Experts Logo">
                     </a>
-                    <!-- Navigation -->
-<!-- 
-                    <div class="block lg:hidden pr-4">
-                        <button id="nav-toggle"
-                            class="flex items-center px-3 py-2 text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none">
-                            <img src="/assets/icons/menu-white.svg" alt="">
-                        </button>
-                    </div>
-
-                    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20 text-center w-full"
-                        id="nav-content">
-                        <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                            <li class="mr-3">
-                                <a class="inline-block  montserrat font-medium py-2 px-4 text-white no-underline  hover:text-underline hover:text-gray-800"
-                                    href="#">Inicio</a>
-                            </li>
-                            <li class="mr-3">
-                                <a class="inline-block montserrat font-medium text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                                    href="#about">Nosotros</a>
-                            </li>
-                            <li class="mr-3">
-                                <a class="inline-block montserrat font-medium text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                                    href="#proyects">Proyectos</a>
-                            </li>
-                            <li class="mr-3">
-                                <a class="inline-block montserrat font-medium text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                                    href="#contact">Contacto</a>
-                            </li>
-                        </ul>
-                        <a href="register.html">
-                            <button id="navAction"
-                                class="mx-auto lg:mx-0 montserrat font-medium hover:underline text-white bg-aqua font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 ">
-                                Registrarse
-                            </button>
-                        </a>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -78,40 +40,40 @@
                 <div class="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow">
                     <div class="py-4 px-8 text-black text-xl border-b border-grey-lighter">Registrarse
                     </div>
-                    <div class="py-4 px-8">
+                    <form method="POST" action="#" class="py-4 px-8">
                         <div class="flex mb-4">
                             <div class="w-1/2 mr-1">
                                 <label class="block text-grey-darker text-sm font-bold mb-2" for="first_name">Nombre</label>
                                 <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-                                    id="first_name" type="text" placeholder="Your first name">
+                                    id="first_name" name="first_name" type="text" placeholder="Tu nombre">
                             </div>
                             <div class="w-1/2 ml-1">
                                 <label class="block text-grey-darker text-sm font-bold mb-2" for="last_name">Apellido</label>
                                 <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-                                    id="last_name" type="text" placeholder="Your last name">
+                                    id="last_name" name="last_name" type="text" placeholder="Tu apellido">
                             </div>
                         </div>
                         <div class="mb-4">
                             <label class="block text-grey-darker text-sm font-bold mb-2" for="email">Correo</label>
                             <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email"
-                                type="email" placeholder="Your email address">
+                                name="email" type="email" placeholder="Tu correo electrónico">
                         </div>
                         <div class="mb-4">
                             <label class="block text-grey-darker text-sm font-bold mb-2" for="password">Contraseña</label>
                             <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-                                id="password" type="password" placeholder="Your secure password">
-                            <p class="text-grey text-xs mt-1">Minimo 6 caracteres</p>
+                                id="password" name="password" type="password" autocomplete="new-password" placeholder="Tu contraseña segura">
+                            <p class="text-grey text-xs mt-1">Mínimo 6 caracteres</p>
                         </div>
                         <div class="flex items-center justify-between mt-8">
-                            <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full"
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
                                 type="submit">
                                 Registrarse
                             </button>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <p class="text-center my-4">
-                    <a href="#" class="text-white text-sm no-underline hover:text-grey-darker">Ya tengo una cuenta</a>
+                    <a href="index.html" class="text-white text-sm no-underline hover:text-grey-darker">Ya tengo una cuenta</a>
                 </p>
             </div>
         </div>

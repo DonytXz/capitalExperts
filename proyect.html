@@ -1,242 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capital Experts - Project Details</title>
+    <title>Capital Experts - Detalle de Proyecto</title>
+    <!-- TODO: Add SRI integrity attributes -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <!--Replace with your tailwind.css once created-->
     <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
-    <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
     <style>
         .gradient {
             background: #0E0E19 0% 0% no-repeat padding-box;
-            /* border: 1px solid #707070; */
             opacity: 1;
         }
     </style>
 </head>
 
 <body class="h-screen w-screen gradient">
-    <div id="parent" class="w-full md:3/4 lg:w-2/3  mx-auto">
+    <div id="parent" class="w-full md:w-3/4 lg:w-2/3 mx-auto">
     </div>
     <div id="images" class="w-full mx-auto">
     </div>
     <script>
+        const projects = {
+            'torre-y-19': {
+                mainImg: './assets/img/gallery/Torre-Y19-3-1024x598.jpg',
+                images: [
+                    './assets/img/proyects/torre-y-19/Torre-Y19-1.jpg',
+                    './assets/img/proyects/torre-y-19/Torre-Y19-2.jpg',
+                    './assets/img/proyects/torre-y-19/Torre-Y19-3.jpg'
+                ]
+            },
+            'rosarito-1': {
+                mainImg: './assets/img/gallery/Residencial-Rosarito-1.jpg',
+                images: [
+                    './assets/img/proyects/rosarito-1/Residencial-Rosarito-1.jpg',
+                    './assets/img/proyects/rosarito-1/Residencial-Rosarito-2.jpg'
+                ]
+            },
+            'carwash': {
+                mainImg: './assets/img/gallery/Carwash-BW-1.jpg',
+                images: [
+                    './assets/img/proyects/carwash/Carwash-BW-1.jpg',
+                    './assets/img/proyects/carwash/Carwash-BW-2.jpg',
+                    './assets/img/proyects/carwash/Carwash-BW-3.jpg',
+                    './assets/img/proyects/carwash/Carwash-BW-4.jpg'
+                ]
+            },
+            'nave-murua-3': {
+                mainImg: './assets/img/gallery/Nave-Murua-3.jpeg',
+                images: [
+                    './assets/img/proyects/nave-murua-3/Nave-Murua-1.jpg',
+                    './assets/img/proyects/nave-murua-3/Nave-Murua-2.jpeg',
+                    './assets/img/proyects/nave-murua-3/Nave-Murua-3.jpeg'
+                ]
+            },
+            'casas-libertad-1': {
+                mainImg: './assets/img/gallery/Casas-Libertad-1-1024x783.jpg',
+                images: [
+                    './assets/img/proyects/casas-libertad-1/Casas-Libertad-1.jpg'
+                ]
+            }
+        };
+
         function getParam(paramName) {
-            let parameters = new URLSearchParams(window.location.search);
-            return parameters.get(paramName)
+            const parameters = new URLSearchParams(window.location.search);
+            return parameters.get(paramName);
         }
-        function assingVal() {
-            let val = getParam('name');
-            switch (val) {
-                case 'torre-y-19':
-                    var img = document.createElement("img");
-                    img.src = './assets/img/gallery/Torre-Y19-3-1024x598.jpg';
-                    img.className = 'w-full my-5 h-1/2';
-                    var src = document.getElementById("parent");
-                    var link1 = document.createElement("a");
-                    var link2 = document.createElement("a");
-                    var link3 = document.createElement("a");
-                    var images = document.getElementById("images");
-                    var imgDiv = document.createElement("div");
-                    var img1 = document.createElement("img");
-                    var img2 = document.createElement("img");
-                    var img3 = document.createElement("img");
-                    img1.src = './assets/img/proyects/torre-y-19/Torre-Y19-1.jpg';
-                    img2.src = './assets/img/proyects/torre-y-19/Torre-Y19-2.jpg';
-                    img3.src = './assets/img/proyects/torre-y-19/Torre-Y19-3.jpg';
-                    imgDiv.className = 'w-10/12  mx-auto h-1/2 flex flex-row';
-                    link1.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link2.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link3.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link1.href = './assets/img/proyects/torre-y-19/Torre-Y19-1.jpg';
-                    link2.href = './assets/img/proyects/torre-y-19/Torre-Y19-2.jpg';
-                    link3.href = './assets/img/proyects/torre-y-19/Torre-Y19-3.jpg';
-                    img1.className = 'w-full my-5 h-1/2 pr-2';
-                    img2.className = 'w-full my-5 h-1/2 pr-2';
-                    img3.className = 'w-full my-5 h-1/2 pr-2';
-                    var title = document.createElement("h1");
-                    title.append(val)
-                    title.className = 'text-white uppercase text-center text-4xl p-5'
-                    src.appendChild(title);
-                    src.appendChild(img);
-                    images.appendChild(imgDiv);
-                    imgDiv.appendChild(link1);
-                    imgDiv.appendChild(link2);
-                    imgDiv.appendChild(link3);
-                    link1.appendChild(img1);
-                    link2.appendChild(img2);
-                    link3.appendChild(img3);
-                    break
-                case 'rosarito-1':
-                    var img = document.createElement("img");
-                    img.src = './assets/img/gallery/Residencial-Rosarito-1.jpg';
-                    img.className = 'w-full my-5 h-1/2';
-                    var src = document.getElementById("parent");
-                    var link1 = document.createElement("a");
-                    var link2 = document.createElement("a");
-                    var link3 = document.createElement("a");
-                    var images = document.getElementById("images");
-                    var imgDiv = document.createElement("div");
-                    var img1 = document.createElement("img");
-                    var img2 = document.createElement("img");
-                    var img3 = document.createElement("img");
-                    img1.src = './assets/img/proyects/rosarito-1/Residencial-Rosarito-1.jpg';
-                    img2.src = './assets/img/proyects/rosarito-1/Residencial-Rosarito-2.jpg';
-                    // img3.src = './assets/img/proyects/rosarito-1/rosarito-1.jpeg';
-                    imgDiv.className = 'w-10/12  mx-auto h-1/2 flex flex-row';
-                    link1.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link2.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link3.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link1.href = './assets/img/proyects/rosarito-1/Residencial-Rosarito-1.jpg';
-                    link2.href = './assets/img/proyects/rosarito-1/Residencial-Rosarito-2.jpg';
-                    // link3.href = './assets/img/proyects/rosarito-1/Nave-Murua-3.jpeg';
-                    img1.className = 'w-full my-5 h-1/2 pr-2';
-                    img2.className = 'w-full my-5 h-1/2 pr-2';
-                    img3.className = 'w-full my-5 h-1/2 pr-2';
-                    var title = document.createElement("h1");
-                    title.append(val)
-                    title.className = 'text-white uppercase text-center text-4xl p-5'
-                    src.appendChild(title);
-                    src.appendChild(img);
-                    images.appendChild(imgDiv);
-                    imgDiv.appendChild(link1);
-                    imgDiv.appendChild(link2);
-                    imgDiv.appendChild(link3);
-                    link1.appendChild(img1);
-                    link2.appendChild(img2);
-                    link3.appendChild(img3);
-                    break
-                case 'carwash':
-                    var img = document.createElement("img");
-                    img.src = './assets/img/gallery/Carwash-BW-1.jpg';
-                    img.className = 'w-full my-5 h-1/2';
-                    var src = document.getElementById("parent");
-                    var link1 = document.createElement("a");
-                    var link2 = document.createElement("a");
-                    var link3 = document.createElement("a");
-                    var link4 = document.createElement("a");
-                    var images = document.getElementById("images");
-                    var imgDiv = document.createElement("div");
-                    var img1 = document.createElement("img");
-                    var img2 = document.createElement("img");
-                    var img3 = document.createElement("img");
-                    var img4 = document.createElement("img");
-                    img1.src = './assets/img/proyects/carwash/Carwash-BW-1.jpg';
-                    img2.src = './assets/img/proyects/carwash/Carwash-BW-2.jpg';
-                    img3.src = './assets/img/proyects/carwash/Carwash-BW-3.jpg';
-                    img4.src = './assets/img/proyects/carwash/Carwash-BW-4.jpg';
-                    imgDiv.className = 'w-10/12  mx-auto h-1/2 flex flex-row';
-                    link1.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link2.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link3.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link4.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link1.href = './assets/img/proyects/carwash/Carwash-BW-1.jpg';
-                    link2.href = './assets/img/proyects/carwash/Carwash-BW-2.jpg';
-                    link3.href = './assets/img/proyects/carwash/Carwash-BW-3.jpg';
-                    link4.href = './assets/img/proyects/carwash/Carwash-BW-4.jpg';
-                    img1.className = 'w-full my-5 h-1/2 pr-2';
-                    img2.className = 'w-full my-5 h-1/2 pr-2';
-                    img3.className = 'w-full my-5 h-1/2 pr-2';
-                    img4.className = 'w-full my-5 h-1/2 pr-2';
-                    var title = document.createElement("h1");
-                    title.append(val)
-                    title.className = 'text-white uppercase text-center text-4xl p-5'
-                    src.appendChild(title);
-                    src.appendChild(img);
-                    images.appendChild(imgDiv);
-                    imgDiv.appendChild(link1);
-                    imgDiv.appendChild(link2);
-                    imgDiv.appendChild(link3);
-                    imgDiv.appendChild(link4);
-                    link1.appendChild(img1);
-                    link2.appendChild(img2);
-                    link3.appendChild(img3);
-                    link4.appendChild(img4);
-                    break
-                case 'nave-murua-3':
-                    var img = document.createElement("img");
-                    img.src = './assets/img/gallery/Nave-Murua-3.jpeg';
-                    img.className = 'w-full my-5 h-1/2';
-                    var src = document.getElementById("parent");
-                    var link1 = document.createElement("a");
-                    var link2 = document.createElement("a");
-                    var link3 = document.createElement("a");
-                    var images = document.getElementById("images");
-                    var imgDiv = document.createElement("div");
-                    var img1 = document.createElement("img");
-                    var img2 = document.createElement("img");
-                    var img3 = document.createElement("img");
-                    img1.src = './assets/img/proyects/nave-murua-3/Nave-Murua-1.jpg';
-                    img2.src = './assets/img/proyects/nave-murua-3/Nave-Murua-2.jpeg';
-                    img3.src = './assets/img/proyects/nave-murua-3/Nave-Murua-3.jpeg';
-                    imgDiv.className = 'w-10/12  mx-auto h-1/2 flex flex-row';
-                    link1.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link2.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link3.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link1.href = './assets/img/proyects/nave-murua-3/Nave-Murua-1.jpg';
-                    link2.href = './assets/img/proyects/nave-murua-3/Nave-Murua-2.jpeg';
-                    link3.href = './assets/img/proyects/nave-murua-3/Nave-Murua-3.jpeg';
-                    img1.className = 'w-full my-5 h-1/2 pr-2';
-                    img2.className = 'w-full my-5 h-1/2 pr-2';
-                    img3.className = 'w-full my-5 h-1/2 pr-2';
-                    var title = document.createElement("h1");
-                    title.append(val)
-                    title.className = 'text-white uppercase text-center text-4xl p-5'
-                    src.appendChild(title);
-                    src.appendChild(img);
-                    images.appendChild(imgDiv);
-                    imgDiv.appendChild(link1);
-                    imgDiv.appendChild(link2);
-                    imgDiv.appendChild(link3);
-                    link1.appendChild(img1);
-                    link2.appendChild(img2);
-                    link3.appendChild(img3);
-                    break
-                case 'casas-libertad-1':
-                    var img = document.createElement("img");
-                    img.src = './assets/img/gallery/Casas-Libertad-1-1024x783.jpg';
-                    img.className = 'w-full my-5 h-1/2';
-                    var src = document.getElementById("parent");
-                    var link1 = document.createElement("a");
-                    var link2 = document.createElement("a");
-                    var link3 = document.createElement("a");
-                    var images = document.getElementById("images");
-                    var imgDiv = document.createElement("div");
-                    var img1 = document.createElement("img");
-                    var img2 = document.createElement("img");
-                    var img3 = document.createElement("img");
-                    img1.src = './assets/img/proyects/casas-libertad-1/Casas-Libertad-1.jpg';
-                    // img2.src = './assets/img/proyects/carwash/Carwash-BW-2.jpg';
-                    // img3.src = './assets/img/proyects/carwash/Carwash-BW-3.jpg';
-                    imgDiv.className = 'w-10/12  mx-auto h-1/2 flex flex-row';
-                    link1.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link2.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link3.className = 'w-1/3 my-5 h-1/2 pr-2';
-                    link1.href = './assets/img/proyects/casas-libertad-1/Casas-Libertad-1.jpg';
-                    // link2.href = './assets/img/proyects/nave-murua-3/Nave-Murua-2.jpeg';
-                    // link3.href = './assets/img/proyects/nave-murua-3/Nave-Murua-3.jpeg';
-                    img1.className = 'w-full my-5 h-1/2 pr-2';
-                    img2.className = 'w-full my-5 h-1/2 pr-2';
-                    img3.className = 'w-full my-5 h-1/2 pr-2';
-                    var title = document.createElement("h1");
-                    title.append(val)
-                    title.className = 'text-white uppercase text-center text-4xl p-5'
-                    src.appendChild(title);
-                    src.appendChild(img);
-                    images.appendChild(imgDiv);
-                    imgDiv.appendChild(link1);
-                    imgDiv.appendChild(link2);
-                    imgDiv.appendChild(link3);
-                    link1.appendChild(img1);
-                    link2.appendChild(img2);
-                    link3.appendChild(img3);
-                    break
+
+        function assignVal() {
+            const val = getParam('name');
+            const project = projects[val];
+            const parentElement = document.getElementById("parent");
+            const imagesElement = document.getElementById("images");
+
+            if (!project) {
+                const title = document.createElement("h1");
+                title.textContent = "Proyecto no encontrado";
+                title.className = 'text-white uppercase text-center text-4xl p-5';
+                parentElement.appendChild(title);
+                return;
+            }
+
+            const title = document.createElement("h1");
+            title.textContent = val;
+            title.className = 'text-white uppercase text-center text-4xl p-5';
+            parentElement.appendChild(title);
+
+            const mainImg = document.createElement("img");
+            mainImg.src = project.mainImg;
+            mainImg.alt = "Imagen principal de " + val;
+            mainImg.className = 'w-full my-5 h-1/2';
+            parentElement.appendChild(mainImg);
+
+            if (project.images && project.images.length > 0) {
+                const imgDiv = document.createElement("div");
+                imgDiv.className = 'w-10/12 mx-auto h-1/2 flex flex-row flex-wrap justify-center';
+                
+                project.images.forEach((imgSrc) => {
+                    const link = document.createElement("a");
+                    link.className = 'w-1/3 my-5 h-1/2 pr-2';
+                    link.href = imgSrc;
+
+                    const img = document.createElement("img");
+                    img.src = imgSrc;
+                    img.alt = "Imagen de galería de " + val;
+                    img.className = 'w-full my-5 h-1/2 pr-2';
+                    
+                    link.appendChild(img);
+                    imgDiv.appendChild(link);
+                });
+                
+                imagesElement.appendChild(imgDiv);
             }
         }
-        assingVal();
+        
+        assignVal();
     </script>
 </body>
 
