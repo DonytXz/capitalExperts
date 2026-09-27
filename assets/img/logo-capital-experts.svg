@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" fill="none">
+  <!-- Brand Icon: Architectural Capital Monogram -->
+  <g transform="translate(10, 8)">
+    <defs>
+      <linearGradient id="capExpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#E81A46" />
+        <stop offset="100%" stop-color="#FF5A7E" />
+      </linearGradient>
+      <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#38BDF8" />
+        <stop offset="100%" stop-color="#253571" />
+      </linearGradient>
+    </defs>
+    <!-- Geometric Building / Chevron Peaks -->
+    <path d="M 8 56 L 8 26 L 24 10 L 40 26 L 40 56 Z" fill="url(#capExpGrad)" opacity="0.95" />
+    <path d="M 24 10 L 24 56 L 40 56 L 40 26 Z" fill="#B30E32" opacity="0.6" />
+    <!-- Secondary Offset Tower -->
+    <path d="M 28 56 L 28 32 L 44 18 L 56 30 L 56 56 Z" fill="url(#goldGrad)" opacity="0.9" />
+    <path d="M 44 18 L 44 56 L 56 56 L 56 30 Z" fill="#1A2552" opacity="0.7" />
+    <!-- Dynamic Capital Growth Ascending Bar -->
+    <polygon points="4,58 60,58 60,62 4,62" fill="#E81A46" />
+    <polygon points="46,14 58,14 58,26" fill="#38BDF8" />
+  </g>
+  
+  <!-- Brand Typography -->
+  <g transform="translate(85, 16)">
+    <!-- Wordmark: CAPITAL -->
+    <text x="0" y="24" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="24" font-weight="900" fill="#FFFFFF" letter-spacing="3.5">
+      CAPITAL
+    </text>
+    <!-- Wordmark: EXPERTS -->
+    <text x="0" y="44" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="18" font-weight="700" fill="#E81A46" letter-spacing="4.5">
+      EXPERTS
+    </text>
+    <!-- Subtitle: DESARROLLO INMOBILIARIO -->
+    <text x="1" y="56" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#CBD5E1" letter-spacing="2.8">
+      DESARROLLO INMOBILIARIO
+    </text>
+  </g>
+</svg>

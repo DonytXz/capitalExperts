@@ -1,46 +1,30 @@
-# [Tailwind Toolbox](https://www.tailwindtoolbox.com/) - [Screenshot Landing Page Template](https://www.tailwindtoolbox.com/templates/screenshot-landing-page)
+# Capital Experts - Desarrolladora e Inversión Inmobiliaria
 
-[Screenshot Landing Page](https://www.tailwindtoolbox.com/templates/screenshot-landing-page) is an open source, generic landing page template with space for a screenshot inside a browser window for [Tailwind CSS](https://tailwindcss.com/) created by [Tailwind Toolbox](https://www.tailwindtoolbox.com/).
+Sitio web corporativo y catálogo de proyectos inmobiliarios de **Capital Experts**, estructurado para inversionistas y clientes residenciales e industriales en el Noroeste de México.
 
-![Screenshot Landing Page](https://www.tailwindtoolbox.com/templates/screenshot-landing-page.png)
+---
 
+## 🏢 Identidad y Marca
+- **Nombre:** Capital Experts, SAPI de C.V.
+- **Ramo:** Desarrollo inmobiliario, fondeo independiente y gerencia de proyectos.
+- **Paleta de Color:**
+  - Primario: `#253571` (Azul Noche / Corporativo)
+  - Acento: `#E81A46` (Carmesí Inversión)
+  - Resalte: `#38BDF8` / `#48D7E5` (Cyan / Aqua)
+  - Fondo: `#0E0E19` / `#F0F0F0`
 
-## Getting Started
+---
 
-Choose one of the following options to get started:
-* [Download the latest release](https://github.com/tailwindtoolbox/Screenshot-Landing-Page/archive/master.zip)
-* Clone the repo: `git clone https://github.com/tailwindtoolbox/Screenshot-Landing-Page.git`
-* Fork the repo
+## 🛠️ Tecnologías
+- **HTML5 & CSS3**
+- **Tailwind CSS v2.2.19**
+- **SweetAlert2** (Formularios y modales de agendamiento)
+- **Moment.js** (Gestión de fecha y hora para citas con asesores)
+- **PHPMailer** (Módulo de contacto y recepción de prospectos)
 
-## Using the Template
+---
 
-The template is just a HTML file using a full CDN hosted Tailwind CSS file.
-
-To get the best out of Tailwind CSS, you need to really start customising it.
-Take a look at our [setup guide](https://www.tailwindtoolbox.com/setup) to start tweaking!
-
-## Sites created using this template
-
-* [ServisAriston.id](https://servisariston.id)
-
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/tailwindtoolbox/Screenshot-Landing-Page/issues/new) here on GitHub.
-
-## Creator
-
-[Tailwind Toolbox](https://www.tailwindtoolbox.com/) was created by and is maintained by **[Amrit Nagi](https://amritnagi.info/)**, Co-owner of [Astrava.Solutions](https://astrava.solutions).
-
-* https://twitter.com/tailwindtoolbox
-* https://twitter.com/amritnagi
-* https://github.com/tailwindtoolbox
-
-Tailwind Toolbox is based on the [Tailwind CSS](https://www.tailwindcss.com/) framework created by [Adam Wathan](https://twitter.com/adamwathan), [Jonathan Reinink](https://twitter.com/reinink), [David Hemphill](https://twitter.com/davidhemphill) and [Steve Schoger](https://twitter.com/steveschoger)
-
-
-
-
-## Copyright and License
-
-Copyright 2018-2019 Astrava.Solutions Ltd. Code released under the MIT license.
+## 🚀 Despliegue en GitHub Pages
+El sitio está configurado para ejecutarse de forma estática en GitHub Pages:
+- **Producción:** [https://donatoalvarez.dev/capitalExperts/](https://donatoalvarez.dev/capitalExperts/)
+- **Ramas:** `main` y `gh-pages` sincronizadas.
