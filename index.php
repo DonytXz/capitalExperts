@@ -39,9 +39,16 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Capital Experts - Nueva Consulta de ' . $name;
-    $mail->Body    = "<b>Nombre:</b> {$name}<br><b>Correo:</b> {$email}<br><b>Teléfono:</b> {$phone}<br><b>Motivo:</b> {$topic}<br><b>Fecha y Hora:</b> {$dateTime}";
-    $mail->AltBody = "Nombre: {$name}\nCorreo: {$email}\nTeléfono: {$phone}\nMotivo: {$topic}\nFecha y Hora: {$dateTime}";
+    $mail->Body = '<b>Nombre:</b> ' . $name . '<br>'
+        . '<b>Correo:</b> ' . $email . '<br>'
+        . '<b>Teléfono:</b> ' . $phone . '<br>'
+        . '<b>Motivo:</b> ' . $topic . '<br>'
+        . '<b>Fecha y Hora:</b> ' . $dateTime;
+    $mail->AltBody = "Nombre: {$name}\n"
+        . "Correo: {$email}\n"
+        . "Teléfono: {$phone}\n"
+        . "Motivo: {$topic}\n"
+        . "Fecha y Hora: {$dateTime}";
 
     $mail->send();
     echo 'Message has been sent';

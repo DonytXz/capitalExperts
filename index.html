@@ -14,15 +14,13 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap"
     rel="stylesheet">
   <!--Google fonnts-->
-  <!-- Font Awesome if you need it
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-  -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"
+    integrity="sha384-HtMZLkYo+pR5/u7zCzXxMJP6QoNnQJt1qkHM0EaOPvGDIzaVZbmYr/TlvUZ/sKAg" crossorigin="anonymous" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
     integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!--Replace with your tailwind.css once created-->
-  <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet"
+    integrity="sha384-GNLsJHEJ4NX03zK5qGHSyYHokh504HgSGc6vchX6viTR6M0q3AeE4PIC8OgmhNHV" crossorigin="anonymous" />
   <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
   <style>
     @import url("https://rsms.me/inter/inter.css");
@@ -202,7 +200,7 @@
             nuestro origen nos brinda la experiencia minimizamos los riesgos para maximizar la rentabilidad de nuestros
             proyectos.
           </p>
-          <a href="#contact" class="hover:opacity-50 bg-aqua border-aqua my-1 p-2 text-white border_red border-2 rounded inline-block" role="button">CONTÁCTANOS</a>
+          <a href="#contact" class="hover:opacity-50 bg-aqua border-aqua my-1 p-2 text-white border_red border-2 rounded inline-block">CONTÁCTANOS</a>
         </div>
       </div>
 
@@ -212,55 +210,36 @@
             class="flex flex-auto h-full flex-row mx-auto items-center justify-between text-xl self-end my-auto  align-bottom font-bold opacity-75">
 
             <div class="w-full h-full flex flex-col  md:flex-row">
-              <div class="option-item w-full flex my-auto">
+              <div class="option-item group w-full flex my-auto">
                 <span
-                  onmouseover="document.getElementById('option-txt1').classList.remove('hidden'); document.getElementById('option1').src='./assets/icons/settings (1).svg'"
-                  onmouseout="document.getElementById('option-txt1').classList.add('hidden'); document.getElementById('option1').src='./assets/icons/settings (1).svg'"
                   class="transform transition duration-500 hover:scale-125 my-auto border-r-2 w-full text-center mx-auto md:my-auto h-full p-0 md:p-4 flex flex-col items-center text-white">
                   <img id="option1" class="" width="50" height="50" src="./assets/icons/settings (1).svg" alt="Gerencia">
                   Gerencia de Proyectos
-                  <p id="option-txt1" class="hidden text-base pt-2">Contáctenos si busca trasladar operaciones a México
+                  <p id="option-txt1" class="hidden group-hover:block text-base pt-2">Contáctenos si busca trasladar operaciones a México
                   </p>
                 </span>
-
               </div>
-              <!-- <div class="option-item w-full my-auto">
-                <span
-                  onmouseover="document.getElementById('option-txt2').classList.remove('hidden'); document.getElementById('option2').src='./assets/icons/vector-2.svg'"
-                  onmouseout="document.getElementById('option-txt2').classList.add('hidden');document.getElementById('option2').src='./assets/icons/icono-2.svg'"
-                  class="transform transition duration-500 hover:scale-125 border-r-2 w-full text-center mx-auto md:my-auto h-full p-0 md:p-4 flex flex-col items-center text-white">
-                  <img id="option2" class="" width="50" height="50" src="./assets/icons/icono-2.svg" alt="Traslado">
-                  TRASLADO DE OPERACIONES
-                  <p id="option-txt2" class="hidden text-base pt-2">Contáctenos si busca trasladar operaciones a México
-                  </p>
-                </span>
-              </div> -->
             </div>
 
             <div class="w-full flex flex-col h-full md:flex-row">
-              <div class="option-item w-full my-auto">
+              <div class="option-item group w-full my-auto">
                 <span
-                  onmouseover="document.getElementById('option-txt3').classList.remove('hidden'); document.getElementById('option3').src='./assets/icons/Grupo 2388.svg'"
-                  onmouseout="document.getElementById('option-txt3').classList.add('hidden');document.getElementById('option3').src='./assets/icons/Grupo 2388.svg'"
                   class="transform transition duration-500 hover:scale-125 md:border-r-2 w-full mx-auto md:my-auto text-center h-full p-0 md:p-4 flex flex-col items-center text-white">
                   <img id="option3" class="" width="50" height="50" src="./assets/icons/Grupo 2388.svg" alt="Fondo de inversión">
                   Fondo de Inversión Inmobiliario
-                  <p id="option-txt3" class="hidden text-base pt-2">Empresas nacionales y extranjeras</p>
+                  <p id="option-txt3" class="hidden group-hover:block text-base pt-2">Empresas nacionales y extranjeras</p>
                 </span>
               </div>
             </div>
             <div class="w-full flex flex-col h-full md:flex-row">
-              <div class="option-item w-full my-auto option-txt">
+              <div class="option-item group w-full my-auto option-txt">
                 <span
-                  onmouseover="document.getElementById('option-txt4').classList.remove('hidden');document.getElementById('option4').src='./assets/icons/Grupo 2377.svg'"
-                  onmouseout="document.getElementById('option-txt4').classList.add('hidden');document.getElementById('option4').src='./assets/icons/Grupo 2377.svg'"
                   class="transform transition duration-500 hover:scale-125 w-full text-center mx-auto md:my-auto p-0 md:p-4 h-full flex flex-col items-center text-white">
                   <img id="option4" class="" width="50" height="50" src="./assets/icons/Grupo 2377.svg" alt="Experiencia">
                   EXPERIENCIA
-                  <p id="option-txt4" class="text-base pt-2 pb-0 hidden xl:pb-8">Construcción industrial y comercial</p>
+                  <p id="option-txt4" class="text-base pt-2 pb-0 hidden group-hover:block xl:pb-8">Construcción industrial y comercial</p>
                 </span>
               </div>
-
             </div>
 
 
@@ -302,7 +281,7 @@
             Gestionamos los proyectos inmobiliarios de manera independiente para garantizar su fondeo a través de un
             programa físico-financiero a la par de una estrategia de comercialización especializada.
           </p>
-          <a href="#proyects" class="hover:opacity-50 mt-6 w-full lg:w-1/2 text-white my-1 p-2 bg-aqua border_red border-2 rounded text-center inline-block" role="button">Ver más →</a>
+          <a href="#proyects" class="hover:opacity-50 mt-6 w-full lg:w-1/2 text-white my-1 p-2 bg-aqua border_red border-2 rounded text-center inline-block">Ver más →</a>
         </div>
         <div class="w-full lg:w-1/2 h-1/2 my-auto relative">
           <img class="my-auto h-full relative float-left w-full" src="./assets/img/employees.jpg" alt="Equipo de trabajo Capital Experts">
@@ -367,7 +346,7 @@
             </a>
           </div>
 
-          <a href="info.html" class="bg-aqua hover:opacity-50 w-3/4 lg:w-1/3 h-32 mx-2 flex justify-center items-center text-white" role="button">Ver más →</a>
+          <a href="info.html" class="bg-aqua hover:opacity-50 w-3/4 lg:w-1/3 h-32 mx-2 flex justify-center items-center text-white">Ver más →</a>
 
         </div>
 
@@ -427,8 +406,6 @@
       <div class="container mx-auto mt-8 px-8">
         <div class="w-3/4 mx-auto flex flex-col md:flex-row py-6">
           <div class="w-1/3 flex-1 mb-6">
-            <!-- <h3 class="text-white font-bold text-2xl">Domicilio</h3>
-            <p class="my-5 text-gray-50">Netzahualcóyotl 1211, Zona Urbana Rio Tijuana, 22010 Tijuana, B.C.</p> -->
             <p class="my-5 text-white">© 2026 Capital Experts, SAPI de C.V. Todos los derechos reservados.</p>
           </div>
 
@@ -438,19 +415,15 @@
               <img class="mx-2" src="./assets/icons/facebook-f-brands.svg" alt="Facebook">
               <img class="mx-2" src="./assets/icons/instagram-brands.svg" alt="Instagram">
             </div>
-            <!-- <p class="my-5 text-white text-center">© 2026 Capital Experts</p> -->
           </div>
-
-          <!-- <div class="w-1/3 flex-1">
-            <h3 class="text-white font-bold text-2xl">Contacto</h3>
-            <p class="my-5 text-white">(664) 976 7531 <br> contacto@capitalexperts.mx</p>
-          </div> -->
 
         </div>
       </div>
     </footer>
   </div>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
+    integrity="sha384-nLoOnA/BDh8A/jxqtckg4DumuCGOBYUnNJLZdQz/zfYNp3wcjGSoWTAzgko06G/2"
+    crossorigin="anonymous"></script>
   <script src="./index.js"></script>
   <script>
     /*Toggle dropdown list*/

@@ -28,32 +28,33 @@ function callForm() {
         background: '#0E0E19',
         focusConfirm: false,
         preConfirm: () => { 
-            const name = Swal.getPopup().querySelector('#name').value;
-            const email = Swal.getPopup().querySelector('#email').value;
-            const phone = Swal.getPopup().querySelector('#phone').value;
-            const topic = Swal.getPopup().querySelector('#topic').value;
-            const dateTime = Swal.getPopup().querySelector('#meeting-time').value;
+            const popup = Swal.getPopup();
+            const name = popup.querySelector('#name').value.trim();
+            const email = popup.querySelector('#email').value.trim();
+            const phone = popup.querySelector('#phone').value.trim();
+            const topic = popup.querySelector('#topic').value.trim();
+            const dateTime = popup.querySelector('#meeting-time').value;
             if (!topic) {
-                Swal.showValidationMessage(`Ingresa tu motivo`);
-                return false;
+                Swal.showValidationMessage('Ingresa tu motivo');
+                return null;
             }
             if (!phone) {
-                Swal.showValidationMessage(`Ingresa tu numero`);
-                return false;
+                Swal.showValidationMessage('Ingresa tu numero');
+                return null;
             }
             if (!email) {
-                Swal.showValidationMessage(`Ingresa tu correo`);
-                return false;
+                Swal.showValidationMessage('Ingresa tu correo');
+                return null;
             }
             if (!name) {
-                Swal.showValidationMessage(`Ingresa tu nombre`);
-                return false;
+                Swal.showValidationMessage('Ingresa tu nombre');
+                return null;
             }
             if (!dateTime) {
-                Swal.showValidationMessage(`Ingresa la fecha y hora`);
-                return false;
+                Swal.showValidationMessage('Ingresa la fecha y hora');
+                return null;
             }
-            return { name: name, email: email, phone: phone, topic: topic, dateTime : dateTime };
+            return { name, email, phone, topic, dateTime };
         }
     });
 }
