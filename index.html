@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Capital Experts</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+
+  <!--Google fonnts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap"
+    rel="stylesheet">
+  <!--Google fonnts-->
+  <!-- Font Awesome if you need it
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  -->
+  <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--Replace with your tailwind.css once created-->
+  <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
+  <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
+  <style>
+    @import url("https://rsms.me/inter/inter.css");
+
+    html {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    }
+
+    .gradient {
+      background: #F0F0F0
+        /* border: 1px solid #707070; */
+    }
+
+    .bg-aqua {
+      background-color: #E81A46;
+    }
+
+    .txt-aqua {
+      color: #253571;
+    }
+
+    .montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .border-aqua {
+      --tw-border-opacity: 1;
+      border-color: rgba(232, 26, 70, var(--tw-border-opacity));
+    }
+
+    #option span:hover {
+      background-color: #E81A46;
+    }
+    .border_red{
+      border-color: #E81A46;
+    }
+
+
+    /* .option-txt span:hover {
+      color: black;
+    }
+    .option-txt span:hover {
+      color: black;
+    } */
+
+
+    /* button,
+      .gradient2 {
+        background-color: #f39f86;
+        background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+      } */
+
+    /* Browser mockup code
+ * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
+ * Live example: https://updown.io
+ */
+
+    .browser-mockup {
+      border-top: 2em solid rgba(230, 230, 230, 0.7);
+      position: relative;
+      height: 60vh;
+    }
+
+
+    .hero {
+      background-image: url(./assets/img/photo_2021-07-27_09-42-41.jpg);
+    }
+
+    .font-gray-form {
+      color: #464657;
+    }
+
+    .browser-mockup:before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: -1.25em;
+      left: 1em;
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 50%;
+      background-color: #f44;
+      box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+    }
+
+    .browser-mockup>* {
+      display: block;
+    }
+
+    .animation-hero {
+      animation-duration: 3s;
+      animation-name: slidein-hero;
+    }
+
+    .blue {
+      background-color: #253571;
+    }
+
+    @keyframes slidein-hero {
+      from {
+        margin-top: 25%;
+        height: 125%;
+        opacity: 0.2;
+      }
+
+      to {
+        margin-top: 0%;
+        height: 50%;
+        opacity: 1;
+      }
+    }
+
+    /* Custom code for the demo */
+  </style>
+</head>
+
+<!-- <body class="gradient leading-relaxed tracking-wide flex flex-col"> -->
+
+<body>
+  <!--Nav-->
+  <div class="gradient w-full h-full leading-relaxed tracking-wide flex flex-col">
+    <div
+      class="px-5 w-full h-full sm:px-8 md:px-18 lg:px-32 xl:px-48 hero bg-center bg-fixed bg-no-repeat bg-center bg-cover h-screen flex flex-col">
+      <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6">
+          <div class="pl-4 flex items-center">
+            <a class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+              <!-- <svg
+              class="h-6 w-6 inline-block fill-current text-yellow-700"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
+            </svg> -->
+              <img width="150" height="60" src="./assets/img/Logo.png" alt="">
+            </a>
+          </div>
+
+          <div class="block lg:hidden pr-4">
+            <button id="nav-toggle"
+              class="flex items-center px-3 py-2 text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none">
+              <img src="/assets/icons/menu-white.svg" alt="">
+            </button>
+          </div>
+
+          <div
+            class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20 text-center w-full"
+            id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+              <li class="mr-3">
+                <a class="inline-block  montserrat font-medium py-2 px-4 text-white no-underline  hover:text-underline hover:text-gray-800"
+                  href="#">Inicio</a>
+              </li>
+              <li class="mr-3">
+                <a class="inline-block montserrat font-medium text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                  href="#about">Nosotros</a>
+              </li>
+              <li class="mr-3">
+                <a class="inline-block montserrat font-medium text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                  href="#proyects">Proyectos</a>
+              </li>
+              <li class="mr-3">
+                <a class="inline-block montserrat font-medium text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                  href="#contact">Contacto</a>
+              </li>
+            </ul>
+            <a>
+              <button id="navAction" onclick="callForm()"
+                class="hover:opacity-50 mx-auto lg:mx-0 montserrat font-medium hover:underline text-white bg-aqua font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 border_red border-2 rounded">
+                Solicite una llamada
+              </button>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="animation-hero w-full md:w-9/12 h-1/2 md:h-8/12 flex mx-auto my-auto">
+        <div class="md:w-2/3 lg:w-1/2 my-auto">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  text-white font-normal montserrat my-1">INCREMENTA
+            <span class="font-semibold montserrat">TU CAPITAL</span>
+          </h2>
+          <p class="text-base md:text-lg lg:text-xl text-white montserrat font-normal my-1">
+            nuestro origen nos brinda la experiencia minimizamos los riesgos para maximizar la rentabilidad de nuestros
+            proyectos.
+          </p>
+          <a href="#contact"> <button
+              class="hover:opacity-50 bg-aqua border-aqua my-1 p-2  text-white border_red border-2 rounded">CONTÁCTANOS</button></a>
+
+        </div>
+      </div>
+
+      <section class="w-full  md:w-9/12 mx-auto h-1/2 md:h-4/12 align-bottom relative">
+        <div class="container  h-full mx-auto  flex flex-row align-bottom absolute bottom-0">
+          <div
+            class="flex flex-auto h-full flex-row mx-auto items-center justify-between text-xl self-end my-auto  align-bottom font-bold opacity-75">
+
+            <div class="w-full h-full flex flex-col  md:flex-row">
+              <div id="option" class="w-full  flex my-auto">
+                <span id="option"
+                  onmouseover="document.getElementById('option-txt1').classList.remove('hidden'); document.getElementById('option1').src='./assets/icons/settings (1).svg'"
+                  onmouseout="document.getElementById('option-txt1').classList.add('hidden'); document.getElementById('option1').src='./assets/icons/settings (1).svg'"
+                  class="transform transition duration-500 hover:scale-125 my-auto  border-r-2  w-full text-center mx-auto md:my-auto h-full p-0 md:p-4   flex flex-col items-center text-white">
+                  <img id="option1" class="" width="50" height="50" src="./assets/icons/settings (1).svg" alt="">
+                  Gerencia de Proyectos
+                  <p id="option-txt1" class="hidden text-base pt-2">Contactenos si busca trasladar operaciones a Méxicos
+                  </p>
+                </span>
+
+              </div>
+              <!-- <div id="option" class="w-full  my-auto">
+                <span id="option"
+                  onmouseover="document.getElementById('option-txt2').classList.remove('hidden'); document.getElementById('option2').src='./assets/icons/vector-2.svg'"
+                  onmouseout="document.getElementById('option-txt2').classList.add('hidden');document.getElementById('option2').src='./assets/icons/icono-2.svg'"
+                  class="transform transition duration-500 hover:scale-125  border-r-2  w-full text-center mx-auto md:my-auto  h-full p-0 md:p-4  flex flex-col items-center text-white">
+                  <img id="option2" class="" width="50" height="50" src="./assets/icons/icono-2.svg" alt="">
+                  TRASLADO DE OPERACIONES
+                  <p id="option-txt2" class="hidden text-base pt-2">Contactenos si busca trasladar operaciones a México
+                  </p>
+                </span>
+              </div> -->
+            </div>
+
+            <div class="w-full  flex flex-col h-full md:flex-row">
+              <div id="option" class="w-full my-auto ">
+                <span
+                  onmouseover="document.getElementById('option-txt3').classList.remove('hidden'); document.getElementById('option3').src='./assets/icons/Grupo 2388.svg'"
+                  onmouseout="document.getElementById('option-txt3').classList.add('hidden');document.getElementById('option3').src='./assets/icons/Grupo 2388.svg'"
+                  class="transform transition duration-500 hover:scale-125 md:border-r-2 w-full mx-auto md:my-auto text-center mx-auto md:my-auto h-full p-0 md:p-4  flex flex-col items-center text-white">
+                  <img id="option3" class="" width="50" height="50" src="./assets/icons/Grupo 2388.svg" alt="">
+                  Fondo de Inversión Inmobiliario
+                  <p id="option-txt3" class="hidden text-base pt-2">Empresas nacionales y extranjeras</p>
+                </span>
+              </div>
+            </div>
+            <div class="w-full  flex flex-col h-full md:flex-row">
+              <div id="option" class="w-full  my-auto  option-txt">
+                <span
+                  onmouseover="document.getElementById('option-txt4').classList.remove('hidden');document.getElementById('option4').src='./assets/icons/Grupo 2377.svg'"
+                  onmouseout="document.getElementById('option-txt4').classList.add('hidden');document.getElementById('option4').src='./assets/icons/Grupo 2377.svg'"
+                  class="transform transition duration-500 hover:scale-125 w-full text-center mx-auto md:my-auto p-0 md:p-4  h-full flex flex-col items-center text-white">
+                  <img id="option4" class="" width="50" height="50" src="./assets/icons/Grupo 2377.svg" alt="">
+                  EXPERIENCIA
+                  <p id="option-txt4" class="text-base pt-2 pb-0 hidden xl:pb-8">Construcción industrial y comercial</p>
+                </span>
+              </div>
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div id="about" class="w-full 2xl:w-10/12   lg:h-screen mx-auto flex flex-col lg:flex-row   lg:mb-20 lg:mb-0">
+      <div class="lg:h-1/2 w-full lg:w-1/2 lg:my-auto relative z-40">
+        <img class="my-auto relative lg:-right-24   h-full w-full" width="500" src="./assets/img/building.jpg" alt="">
+      </div>
+      <div
+        class="container z-0  lg:relative  lg:-left-12 xl:-left-18 2xl:-left-24  lg:h-2/3  w-full lg:w-1/2 lg:my-auto border-4 border-aqua py-5 lg:py-28 px-5 lg:pl-56 max-w-5xl inline-block ">
+        <div class="w-full h-full flex flex-col lg:justify-center lg:content-center  lg:my-auto">
+          <h2 class="font-semibold montserrat text-white text-4xl align-middle txt-aqua">
+            GDX CAPITAL <br>
+            <span class="text-xl align-middle txt-aqua">Desarrolladora Inmobiliaria</span>
+          </h2>
+          <p class="text-white font-normal text-base mt-0 lg:mt-5 align-middle txt-aqua">
+            El resultado de la sinergia de empresas especializadas en el ramo de la construcción,
+            finanzas y corretaje en bienes raíces en la región del Noroeste del país, en conjunto contamos con más de 45
+            años de experiencia en la proyección, fondeo, desarrollo y comercialización de bienes inmuebles.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full h-full blue py-8">
+      <div class="w-full lg:w-3/4  h-full  my-auto mx-auto flex flex-col lg:flex-row">
+        <div class="w-full lg:w-1/2 h-full flex flex-col justify-center content-center self-center  my-auto ">
+          <h2 class="font-semibold w-full lg:w-2/3 montserrat text-white text-4xl align-middle">
+            GDX CAPITAL
+            <span class="text-xl  w-full lg:w-2/3 align-middle">Desarrolladora Inmobiliaria</span>
+          </h2>
+          <p class="text-white  w-full lg:w-2/3 font-normal text-base mt-5 align-middle">
+            Gestionamos los proyectos inmobiliarios de manera independiente para garantizar su fondeo a través de un
+            programa físico-financiero a la par de una estrategia de comercialización especializada.
+          </p>
+          <button class="hover:opacity-50  mt-6  w-full lg:w-1/2 text-white  my-1 p-2  bg-aqua border_red border-2 rounded">Ver mas -></button>
+        </div>
+        <div class="w-full lg:w-1/2   h-1/2   my-auto relative ">
+          <img class="my-auto h-full relative float-left w-full " src="./assets/img/employees.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <section id="proyects" class="py-8">
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto bg-aqua w-1/6  my-0 py-0 rounded-t"></div>
+      </div>
+      <h2 class="w-1/2 mx-auto my-2 text-2xl lg:text-5xl text-white leading-tight text-center txt-aqua">
+        Maximizamos la rentabilidad de nuestros Proyectos
+      </h2>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+
+      <div class="w-full h-full container mx-auto flex flex-row ">
+        <div class="w-1/2 h-full mx-2">
+          <div class="w-full m-2  flex justify-end">
+            <a target="new blank" href="proyect.html?name=torre-y-19">
+              <img class="hover:opacity-25  relative float-right" width="350" height="300"
+                src="./assets/img/gallery/Torre-Y19-3-1024x598.jpg" alt="">
+            </a>
+          </div>
+
+          <div class="w-full m-2  flex justify-end">
+            <a target="new blank" href="proyect.html?name=rosarito-1">
+              <img class="hover:opacity-25 " width="490" height="420"
+                src="./assets/img/gallery/Residencial-Rosarito-1.jpg" alt="">
+            </a>
+          </div>
+
+
+          <div class="w-full m-2  flex justify-end">
+            <a target="new blank" href="proyect.html?name=carwash">
+              <img class="hover:opacity-25 " width="550" height="300" src="./assets/img/gallery/Carwash-BW-1.jpg"
+                alt="">
+            </a>
+          </div>
+
+        </div>
+
+        <div class="w-1/2 h-full mx-2">
+
+          <div class="w-full m-2  flex justify-start">
+            <a target="new blank" href="proyect.html?name=nave-murua-3">
+              <img class="hover:opacity-25 " width="500" height="410" src="./assets/img/gallery/Nave-Murua-3.jpeg"
+                alt="">
+            </a>
+          </div>
+
+          <div class="w-full m-2  flex justify-start">
+            <a target="new blank" href="proyect.html?name=casas-libertad-1">
+              <img class="hover:opacity-25 " width="450" height="290"
+                src="./assets/img/gallery/Casas-Libertad-1-1024x783.jpg" alt="">
+            </a>
+          </div>
+
+          <div class="bg-aqua hover:opacity-50 w-3/4 lg:w-1/3 h-32 mx-2 flex justify-center items-center ">
+            <a href="info.html"><button>
+                <p class="text-white">Ver mas ->
+              </button></p></a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="w-full mx-auto blue pt-12">
+      <div class="w-full h-full flex flex-col lg:flex-row">
+        <div class="w-full lg:w-1/2  lg:relative p-10">
+          <div class="w-full lg:w-2/3 lg:relative lg:float-right ">
+            <h2 class="my-2 montserrat font-semibold w-full text-2xl lg:text-5xl text-white">
+              Invierte y asegura tu patrimonio
+            </h2>
+            <h3 class="hover:opacity-50 my-2 text-white  ">
+              <button>ENVIANOS TUS DATOS -></button>
+            </h3>
+            <p class="text-white montserrat font-normal">
+              <strong class="montserrat font-semibold">GDX CAPITAL</strong> te ofrece la oportunidad de realizar
+              inversiones en bienes raíces en México,
+              a
+              través de
+              nuestros propios portafolios de proyectos inmobiliarios, contamos con modalidades de inversión para
+              incrementar tu capital o bien para fortalecer tu patrimonio.
+            </p>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 h-full flex lg:p-10 ">
+          <form action="index.php" method="POST" class="w-full h-full float-left">
+            <div class="w-full lg:w-2/3 h-full p-10 bg-white flex flex-col self-start">
+              <label class="mt-4 font-gray-form" for="">Nombre</label>
+              <input class="font-gray-form border-2 rounded bg-gray-200 px-4 py-2" placeholder="Escriba aqui"
+                type="text" name="" id="">
+              <label class="font-gray-form mt-4" for="">Correo Electrónico</label>
+              <input class="font-gray-form border-2 rounded bg-gray-200 px-4 py-2" placeholder="Escriba aqui"
+                type="email" name="" id="">
+              <label class="font-gray-form mt-4" for="">Teléfono</label>
+              <input class=" font-gray-formborder-2 rounded bg-gray-200 px-4 py-2" placeholder="Escriba aqui" type="tel"
+                name="" id="">
+              <p class="ml-8 font-gray-form mt-3 montserrat font-normal"><strong
+                  class="font-gray-form montserrat font-bold">Acepto</strong> - que mis datos sean compartidos y usados
+                para
+                contactarme de forma directa.</p>
+              <button type="submit" onclick="submitted()" ;
+                class="hover:opacity-50 mt-6  w-full lg:w-2/4 text-white border-2 rounded bg-aqua p-2 self-end border_red border-2 rounded">ENVIAR</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer-->
+
+    <footer class="blue">
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto bg-gray-600 w-10/12  my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="container mx-auto mt-8 px-8">
+        <div class="w-3/4 mx-auto flex flex-col md:flex-row py-6">
+          <div class="w-1/3 flex-1 mb-6">
+            <!-- <h3 class="text-white font-bold text-2xl">Domicilio</h3>
+            <p class="my-5 text-gray-50">Netzahualcóyotl 1211, Zona Urbana Rio Tijuana, 22010 Tijuana, B.C.</p> -->
+            <p class="my-5 text-white">© 2021 GDX capital, SAPI de C.V.</p>
+          </div>
+
+          <div class="flex flex-col w-1/3">
+            <p class="my-5 text-white text-center">Siguenos en</p>
+            <div class="flex flex-row w-1/2 mx-auto justify-center content-center">
+              <img class="mx-2" src="./assets/icons/facebook-f-brands.svg" alt="">
+              <img class="mx-2" src="./assets/icons/instagram-brands.svg" alt="">
+            </div>
+            <!-- <p class="my-5 text-white text-center">© 2021 GDX capital</p> -->
+          </div>
+
+          <!-- <div class="w-1/3 flex-1">
+            <h3 class="text-white font-bold text-2xl">Contacto</h3>
+            <p class="my-5 text-white">(664) 976 7531 <br> admin@gdxcapital.com</p>
+          </div> -->
+
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+
+  <script src="./index.js"></script>
+  <script>
+    /*Toggle dropdown list*/
+    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+    var navMenuDiv = document.getElementById("nav-content");
+    var navMenu = document.getElementById("nav-toggle");
+
+    // var option1 = document.getElementById("option1");
+    // var option2 = document.getElementById("option2");
+    // var option3 = document.getElementById("option3");      bg-aqua 
+    // var option4 = document.getElementById("option4");
+
+    document.onclick = check;
+
+
+
+    function check(e) {
+      var target = (e && e.target) || (event && event.srcElement);
+
+      //Nav Menu
+      if (!checkParent(target, navMenuDiv)) {
+        // click NOT on the menu
+        if (checkParent(target, navMenu)) {
+          // click on the link
+          if (navMenuDiv.classList.contains("hidden")) {
+            navMenuDiv.classList.remove("hidden");
+          } else {
+            navMenuDiv.classList.add("hidden");
+          }
+        } else {
+          // click both outside link and outside menu, hide menu
+          navMenuDiv.classList.add("hidden");
+        }
+      }
+    }
+    function checkParent(t, elm) {
+      while (t.parentNode) {
+        if (t == elm) {
+          return true;
+        }
+        t = t.parentNode;
+      }
+      return false;
+    }
+  </script>
+</body>
+
+</html>

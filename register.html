@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
+    <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
+    <style>
+        .gradient {
+            background: #0E0E19 0% 0% no-repeat padding-box;
+            /* border: 1px solid #707070; */
+            opacity: 1;
+        }
+
+        .bg-aqua {
+            background-color: #48D7E5;
+        }
+    </style>
+</head>
+
+<body class="gradient">
+    <div class="font-sans antialiased bg-grey-lightest">
+        <!-- Top Nav -->
+        <div class=" w-full bg-green fixed shadow z-1">
+            <div class="container mx-auto">
+                <div class="w-full flex justify-between items-center py-4 px-8">
+                    <!-- Brand -->
+                    <img width="150" height="60" src="./assets/img/Logo.png" alt="">
+                    <!-- Navigation -->
+<!-- 
+                    <div class="block lg:hidden pr-4">
+                        <button id="nav-toggle"
+                            class="flex items-center px-3 py-2 text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none">
+                            <img src="/assets/icons/menu-white.svg" alt="">
+                        </button>
+                    </div>
+
+                    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20 text-center w-full"
+                        id="nav-content">
+                        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                            <li class="mr-3">
+                                <a class="inline-block  montserrat font-medium py-2 px-4 text-white no-underline  hover:text-underline hover:text-gray-800"
+                                    href="#">Inicio</a>
+                            </li>
+                            <li class="mr-3">
+                                <a class="inline-block montserrat font-medium text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                                    href="#about">Nosotros</a>
+                            </li>
+                            <li class="mr-3">
+                                <a class="inline-block montserrat font-medium text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                                    href="#proyects">Proyectos</a>
+                            </li>
+                            <li class="mr-3">
+                                <a class="inline-block montserrat font-medium text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                                    href="#contact">Contacto</a>
+                            </li>
+                        </ul>
+                        <a href="register.html">
+                            <button id="navAction"
+                                class="mx-auto lg:mx-0 montserrat font-medium hover:underline text-white bg-aqua font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 ">
+                                Registrarse
+                            </button>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="w-full h-full bg-grey-lightest" style="padding-top: 4rem;">
+            <div class="container my-auto mx-auto py-8">
+                <div class="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow">
+                    <div class="py-4 px-8 text-black text-xl border-b border-grey-lighter">Registrarse
+                    </div>
+                    <div class="py-4 px-8">
+                        <div class="flex mb-4">
+                            <div class="w-1/2 mr-1">
+                                <label class="block text-grey-darker text-sm font-bold mb-2" for="first_name">Nombre</label>
+                                <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                    id="first_name" type="text" placeholder="Your first name">
+                            </div>
+                            <div class="w-1/2 ml-1">
+                                <label class="block text-grey-darker text-sm font-bold mb-2" for="last_name">Apellido</label>
+                                <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                    id="last_name" type="text" placeholder="Your last name">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-grey-darker text-sm font-bold mb-2" for="email">Correo</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email"
+                                type="email" placeholder="Your email address">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-grey-darker text-sm font-bold mb-2" for="password">Contraseña</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                id="password" type="password" placeholder="Your secure password">
+                            <p class="text-grey text-xs mt-1">Minimo 6 caracteres</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-8">
+                            <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full"
+                                type="submit">
+                                Registrarse
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center my-4">
+                    <a href="#" class="text-white text-sm no-underline hover:text-grey-darker">Ya tengo una cuenta</a>
+                </p>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="w-full bg-grey-lighter py-8">
+            <div class="container mx-auto text-center px-8">
+                <p class="text-white mb-2 text-sm">
+                    <span class="font-bold">GDX Capital</span>
+                    Made by CILABS
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
